@@ -1,0 +1,29 @@
+.telegram-post-wrapper > iframe {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.telegram-post-input-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telegram-post-input {
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #d7e3ec;
+    border-width: 1px;
+    color: #2381cc;
+}
+
+.telegram-post-invalid-input {
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.17);
+}
+
+.telegram-post-question-mark {
+    cursor: pointer;
+}

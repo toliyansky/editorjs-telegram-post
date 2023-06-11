@@ -1,0 +1,40 @@
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+<script src="telegram-post.js"></script>
+<link href="telegram-post.css" rel="stylesheet"/>
+
+<div id="editorjs"></div>
+
+<button id="save-button">Save</button>
+<pre id="output"></pre>
+
+<script>
+    const editor = new EditorJS({
+        autofocus: true,
+        tools: {
+            telegramPost: TelegramPost
+        },
+        data: {
+            "time": 1686491127424,
+            "blocks": [
+                {
+                    "id": "DB6Ga2Eknk",
+                    "type": "telegramPost",
+                    "data": {
+                        "channelName": "telegram",
+                        "messageId": 236
+                    }
+                }
+            ],
+            "version": "2.27.0"
+        }
+    });
+
+    const saveButton = document.getElementById('save-button');
+    const output = document.getElementById('output');
+
+    saveButton.addEventListener('click', () => {
+        editor.save().then(savedData => {
+            output.innerHTML = JSON.stringify(savedData, null, 4);
+        })
+    })
+</script>
