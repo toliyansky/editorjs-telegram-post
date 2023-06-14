@@ -1,6 +1,6 @@
 {
   "name": "editorjs-telegram-post",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides Telegram post widget for the editorjs",
   "main": "./dist/bundle.js",
   "scripts": {
