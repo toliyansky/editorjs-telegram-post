@@ -1,5 +1,4 @@
 import './telegram-post.css';
-import questionMarkImg from './question-mark.png';
 
 export default class TelegramPost {
 
@@ -54,12 +53,21 @@ export default class TelegramPost {
             }
         }
 
-        const questionMark = document.createElement("img");
-        questionMark.src = "question-mark.png";
-        questionMark.alt = "?";
-        questionMark.width = 25;
-        questionMark.height = 25;
-        questionMark.classList.add("telegram-post-question-mark");
+        const questionMark = document.createElement("div");
+        questionMark.style.borderStyle = "solid";
+        questionMark.style.borderWidth = "1px";
+        questionMark.style.borderRadius = "100%";
+        questionMark.style.borderColor = "#d7e3ec";
+        questionMark.style.color = "#d7e3ec";
+        questionMark.style.width = "24px";
+        questionMark.style.height = "24px";
+        questionMark.style.display = "flex";
+        questionMark.style.textAlign = "center";
+        questionMark.style.justifyContent = "center";
+        questionMark.style.alignItems = "center";
+        questionMark.style.cursor = "pointer";
+        questionMark.style.userSelect = "none";
+        questionMark.innerText = "?";
         questionMark.title = "Select post in telegram, press 'Copy link' and paste it here";
         inputRow.appendChild(questionMark);
 
