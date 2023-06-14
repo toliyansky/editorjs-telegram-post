@@ -1,7 +1,11 @@
+import './telegram-post.css';
+import questionMarkImg from './question-mark.png';
+
 export default class TelegramPost {
 
-    constructor({data}) {
+    constructor({data, config, api, readOnly}) {
         this.data = data;
+        this.readOnly = readOnly;
     }
 
     render() {
@@ -14,6 +18,9 @@ export default class TelegramPost {
 
         const linkInput = document.createElement('input');
         linkInput.classList.add("telegram-post-input");
+        if (this.readOnly) {
+            linkInput.hidden = true;
+        }
         inputRow.appendChild(linkInput);
 
         if (this.validate(this.data)) {
@@ -134,6 +141,10 @@ export default class TelegramPost {
             return false;
         }
 
+        return true;
+    }
+
+    static get isReadOnlySupported() {
         return true;
     }
 }
