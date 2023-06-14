@@ -70,7 +70,7 @@ export default class TelegramPost {
         questionMark.innerText = "?";
         questionMark.title = "Select post in telegram, press 'Copy link' and paste it here";
         if (this.readOnly) {
-            questionMark.hidden = true;
+            questionMark.style.display = "none";
         }
         inputRow.appendChild(questionMark);
 
